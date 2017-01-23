@@ -1,0 +1,46 @@
+{
+  "name": "matt-webb-skybet-tech-test",
+  "version": "1.0.0",
+  "description": "SkyBet Tech Test",
+  "author": "Matthew D Webb",
+  "scripts": {
+    "test": "mocha --compilers js:babel-core/register database/**/**/*.js",
+    "start": "node app --exec \"babel-node database --presets es2015,stage-0\"",
+    "transpile-es2015": "babel database -d lib"
+  },
+  "dependencies": {
+    "babel-preset-react": "^6.22.0",
+    "body-parser": "~1.13.2",
+    "connect-ensure-login": "^0.1.1",
+    "cookie-parser": "~1.3.5",
+    "debug": "~2.2.0",
+    "dotenv": "^1.2.0",
+    "express": "^4.13.4",
+    "express-session": "^1.11.3",
+    "jade": "~1.11.0",
+    "moment": "^2.17.1",
+    "morgan": "~1.6.1",
+    "passport": "^0.3.0",
+    "passport-auth0": "^0.5.0",
+    "uuid": "^3.0.1"
+  },
+  "babel": {
+    "presets": [
+      "es2015"
+    ]
+  },
+  "devDependencies": {
+    "babel-core": "^6.11.4",
+    "babel-loader": "^6.2.5",
+    "babel-preset-es2015": "^6.22.0",
+    "babel-register": "^6.22.0",
+    "babel-cli": "^6.9.0",
+    "babel-preset-stage-0": "^6.5.0",
+    "eslint": "^3.14.0",
+    "mocha": "^3.2.0",
+    "os": "^0.1.1",
+    "nodemon": "^1.11.0",
+    "rimraf": "^2.5.4",
+    "sinon": "^1.17.7"
+  }
+}

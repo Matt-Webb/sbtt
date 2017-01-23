@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  div.clearfix
+    div.pull-left
+      i.fa.fa-lg.fa-pie-chart
+      span Sky Sports Presenters
+    div.pull-right
+      img(src="#{user.picture}", style="height:24px; border-radius: 30px;")
+      strong(style="margin: 0px 10px;") #{user.nickname}
+      a(href="/logout") Logout
+  br
+  div.jumbotron
+    h1.text-center Presenters
