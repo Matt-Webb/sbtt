@@ -7,7 +7,7 @@
 import path from "path";
 
 const config = {
-	file: path.resolve("./src/database/store/presenters.json")
+	file: path.resolve("./database/store/presenters.json")
 };
 
 export default config;

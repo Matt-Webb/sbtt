@@ -1,0 +1,31 @@
+form
+  table
+    tr
+      th First name
+      th Last name
+    tr
+      td
+        input(type='text', name='people[][firstname]', value='Jeff')
+      td
+        input(type='text', name='people[][surname]', value='Stelling')
+    tr
+      td
+        input(type='text', name='people[][firstname]', value='Chris')
+      td
+        input(type='text', name='people[][surname]', value='Kamara')
+    tr
+      td
+        input(type='text', name='people[][firstname]', value='Alex')
+      td
+        input(type='text', name='people[][surname]', value='Hammond')
+    tr
+      td
+        input(type='text', name='people[][firstname]', value='Jim')
+      td
+        input(type='text', name='people[][surname]', value='White')
+    tr
+      td
+        input(type='text', name='people[][firstname]', value='Natalie')
+      td
+        input(type='text', name='people[][surname]', value='Sawyer')
+  input(type='submit', value='OK', method="post")

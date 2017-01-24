@@ -3,7 +3,7 @@ var passport = require('passport');
 var router = express.Router();
 var ensureLoggedIn = require('connect-ensure-login').ensureLoggedIn();
 var request = require('request');
-var db = require('../lib');
+var db = require('../lib/index.js');
 
 var env = {
   AUTH0_CLIENT_ID: process.env.AUTH0_CLIENT_ID,
@@ -26,8 +26,27 @@ router.get('/logout', function(req, res){
   res.redirect('/');
 });
 
-router.get('/presenters', ensureLoggedIn, function(req, res){
-  res.render('presenters', {user: req.user });
+router.get('/presenters', ensureLoggedIn, function(req, res) {
+
+
+  db.default.getPresenters( function(err, data ) {
+    if( err ) res.render('error', { error: err });
+
+    res.render('presenters', {user: req.user, presenters: data });
+  })
+
+
+});
+
+router.get('/form',ensureLoggedIn, function(req, res) {
+  res.render('form', {user: req.user});
+});
+
+router.post('/form', ensureLoggedIn, function(req, res) {
+
+  console.log(req.body);
+
+  res.render('presenters', {user: req.user});
 });
 
 router.get('/user', ensureLoggedIn, function(req, res, next) {

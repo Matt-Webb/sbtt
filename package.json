@@ -6,7 +6,7 @@
   "scripts": {
     "test": "mocha --compilers js:babel-core/register database/**/**/*.js",
     "start": "node app --exec \"babel-node database --presets es2015,stage-0\"",
-    "transpile-es2015": "babel database -d lib"
+    "transpile": "babel database -d lib"
   },
   "dependencies": {
     "babel-preset-react": "^6.22.0",

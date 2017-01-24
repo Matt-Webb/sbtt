@@ -12,3 +12,8 @@ block content
   br
   div.jumbotron
     h1.text-center Presenters
+  br
+  div.col-sm-12
+    each presenter, index in presenters
+      li(class="text-center")
+        span=presenter.fullName
