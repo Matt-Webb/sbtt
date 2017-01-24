@@ -29,7 +29,7 @@ Or via a Version Manager:
 npm install
 ```
 
-This is important, the main database directory is the 'magic' has been performed, this is all written in ES6 and I have slotted it into a ES5 boilerplate.
+This is important, the main database directory is where the 'magic' has been performed, this is all written in ES6 and I have slotted it into a ES5 boilerplate.
 
 ```
 npm run transpile
